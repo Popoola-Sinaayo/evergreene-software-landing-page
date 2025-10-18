@@ -1,22 +1,526 @@
+---
+export interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	canonical?: string;
+	ogImage?: string;
+	ogType?: string;
+	noindex?: boolean;
+}
+
+const { 
+	title = "Evergreene Software Inc. - World-Class Software for Less", 
+	description = "We build world-class software for less. Helping startups and businesses bring their ideas to life with affordable, global-standard development. Based in Nigeria, trusted globally.",
+	keywords = "software development, web development, mobile apps, fintech, SaaS, Nigeria, affordable software, React, Node.js, Python, Evergreene Software, Phinmon",
+	canonical = Astro.url.href,
+	ogImage = "/og-image.svg",
+	ogType = "website",
+	noindex = false
+} = Astro.props;
+
+const siteUrl = "https://evergreenesoftware.com";
+const fullCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Evergreene Software Inc." />
+		<meta name="robots" content={noindex ? "noindex,nofollow" : "index,follow"} />
+		<link rel="canonical" href={fullCanonical} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={fullCanonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullOgImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Evergreene Software Inc." />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={fullCanonical} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={fullOgImage} />
+		<meta name="twitter:site" content="@evergreenesoft" />
+		<meta name="twitter:creator" content="@evergreenesoft" />
+		
+		<!-- Additional SEO Meta Tags -->
+		<meta name="theme-color" content="#10b981" />
+		<meta name="msapplication-TileColor" content="#10b981" />
+		<meta name="application-name" content="Evergreene Software" />
+		<meta name="apple-mobile-web-app-title" content="Evergreene Software" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		
+		<!-- Geo Tags -->
+		<meta name="geo.region" content="NG-LA" />
+		<meta name="geo.placename" content="Lagos, Nigeria" />
+		<meta name="geo.position" content="6.5244;3.3792" />
+		<meta name="ICBM" content="6.5244, 3.3792" />
+		
+		<!-- Business/Organization Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Evergreene Software Inc.",
+			"url": "https://evergreenesoftware.com",
+			"logo": "https://evergreenesoftware.com/logo.png",
+			"description": "We build world-class software for less. Helping startups and businesses bring their ideas to life with affordable, global-standard development.",
+			"foundingDate": "2020",
+			"founder": {
+				"@type": "Person",
+				"name": "Popoola Sinaayo"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Lagos",
+				"addressCountry": "Nigeria"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+234-XXX-XXX-XXXX",
+				"contactType": "customer service",
+				"email": "hello@evergreenesoftware.com"
+			},
+			"sameAs": [
+				"https://linkedin.com/company/evergreene-software",
+				"https://twitter.com/evergreenesoft",
+				"https://github.com/evergreene-software"
+			],
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Software Development Services",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Web Development",
+							"description": "Modern, responsive web applications built with the latest technologies"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Mobile Development",
+							"description": "Native and cross-platform mobile apps for iOS and Android"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "API Development",
+							"description": "Robust APIs and backend services with secure, scalable infrastructure"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "SaaS Solutions",
+							"description": "Complete software-as-a-service platforms from concept to deployment"
+						}
+					}
+				]
+			}
+		}
+		</script>
+		
+		<!-- Performance & SEO Optimizations -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="dns-prefetch" href="//fonts.gstatic.com">
+		
+		<!-- Google Fonts - Modern & Appealing -->
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+		
+		<!-- Custom CSS for animations and scrollbar -->
+		<style>
+			/* Supaapps-style smooth animations */
+			[data-animate] {
+				opacity: 0;
+				transform: translateY(40px);
+				transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			[data-animate].animate-fade-in {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
+			/* Smooth staggered reveals like Supaapps */
+			[data-animate]:nth-child(1) { transition-delay: 0.1s; }
+			[data-animate]:nth-child(2) { transition-delay: 0.2s; }
+			[data-animate]:nth-child(3) { transition-delay: 0.3s; }
+			[data-animate]:nth-child(4) { transition-delay: 0.4s; }
+			[data-animate]:nth-child(5) { transition-delay: 0.5s; }
+			[data-animate]:nth-child(6) { transition-delay: 0.6s; }
+			
+			/* Supaapps-style section reveals */
+			.section-reveal {
+				opacity: 0;
+				transform: translateY(60px);
+				transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.section-reveal.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
+			/* Smooth text animations */
+			.text-reveal {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.text-reveal.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
+			/* Supaapps-style gentle hover effects */
+			.hover-lift {
+				transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.hover-lift:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+			}
+			
+			/* Smooth card hover like Supaapps */
+			.card-smooth {
+				transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.card-smooth:hover {
+				transform: translateY(-6px);
+				box-shadow: 0 30px 60px rgba(34, 197, 94, 0.12);
+			}
+			
+			/* Supaapps-style button animations */
+			.btn-primary {
+				position: relative;
+				overflow: hidden;
+				transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.btn-primary::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+				transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.btn-primary:hover::before {
+				left: 100%;
+			}
+			
+			.btn-primary:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 15px 30px rgba(34, 197, 94, 0.2);
+			}
+			
+			/* Supaapps-style card animations */
+			.card-hover {
+				transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+				position: relative;
+			}
+			
+			.card-hover::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.03));
+				opacity: 0;
+				transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+				border-radius: inherit;
+			}
+			
+			.card-hover:hover::before {
+				opacity: 1;
+			}
+			
+			.card-hover:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 25px 50px rgba(34, 197, 94, 0.12);
+			}
+			
+			/* Smooth tech stack card animations */
+			.tech-card {
+				transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.tech-card:hover {
+				transform: translateY(-6px) scale(1.01);
+				box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+			}
+			
+			/* Supaapps-style gradient text animation */
+			.gradient-text {
+				background: linear-gradient(45deg, #10b981, #059669, #10b981);
+				background-size: 200% 200%;
+				animation: gradient-shift 4s ease-in-out infinite;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+			
+			@keyframes gradient-shift {
+				0% { background-position: 0% 50%; }
+				50% { background-position: 100% 50%; }
+				100% { background-position: 0% 50%; }
+			}
+			
+			/* Hero text reveal animation */
+			.hero-text {
+				opacity: 0;
+				transform: translateY(30px);
+				animation: heroReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+			}
+			
+			.hero-text:nth-child(1) { animation-delay: 0.2s; }
+			.hero-text:nth-child(2) { animation-delay: 0.4s; }
+			.hero-text:nth-child(3) { animation-delay: 0.6s; }
+			
+			@keyframes heroReveal {
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+			
+			/* Smooth floating animation */
+			.float-gentle {
+				animation: floatGentle 6s ease-in-out infinite;
+			}
+			
+			@keyframes floatGentle {
+				0%, 100% { transform: translateY(0px); }
+				50% { transform: translateY(-15px); }
+			}
+			
+			/* Custom scrollbar for webkit browsers */
+			::-webkit-scrollbar {
+				width: 6px;
+			}
+			
+			::-webkit-scrollbar-track {
+				background: #f1f5f9;
+			}
+			
+			::-webkit-scrollbar-thumb {
+				background: linear-gradient(to bottom, #10b981, #059669);
+				border-radius: 3px;
+			}
+			
+			::-webkit-scrollbar-thumb:hover {
+				background: linear-gradient(to bottom, #34d399, #10b981);
+			}
+			
+			/* Dark mode scrollbar */
+			.dark ::-webkit-scrollbar-track {
+				background: #1e293b;
+			}
+			
+			/* Mobile optimizations */
+			@media (max-width: 768px) {
+				[data-animate] {
+					transform: translateY(10px);
+				}
+				
+				/* Reduce motion for users who prefer it */
+				@media (prefers-reduced-motion: reduce) {
+					[data-animate] {
+						transition: none;
+						transform: none;
+					}
+					
+					.animate-float {
+						animation: none;
+					}
+					
+					.gradient-text {
+						animation: none;
+					}
+				}
+			}
+			
+			/* Focus styles for accessibility */
+			*:focus {
+				outline: 2px solid #10b981;
+				outline-offset: 2px;
+			}
+			
+			/* Selection color */
+			::selection {
+				background: #10b981;
+				color: white;
+			}
+		</style>
 	</head>
-	<body>
+	<body class="antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 overflow-x-hidden scroll-smooth transition-colors duration-300">
 		<slot />
+		
+		<!-- Supaapps-style smooth animations -->
+		<script>
+			// Supaapps-style smooth intersection observer
+			const observerOptions = {
+				threshold: 0.15,
+				rootMargin: '0px 0px -80px 0px'
+			};
+			
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry, index) => {
+					if (entry.isIntersecting) {
+						// Supaapps-style staggered reveal
+						setTimeout(() => {
+							entry.target.classList.add('animate-fade-in');
+						}, index * 150);
+					}
+				});
+			}, observerOptions);
+			
+			// Section reveal observer for larger sections
+			const sectionObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+					}
+				});
+			}, {
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px'
+			});
+			
+			// Initialize animations
+			document.addEventListener('DOMContentLoaded', () => {
+				// Observe animated elements
+				const animatedElements = document.querySelectorAll('[data-animate]');
+				animatedElements.forEach(el => observer.observe(el));
+				
+				// Observe section reveals
+				const sectionElements = document.querySelectorAll('.section-reveal');
+				sectionElements.forEach(el => sectionObserver.observe(el));
+				
+				// Add tech card animations
+				const techCards = document.querySelectorAll('.bg-slate-800\\/30');
+				techCards.forEach((card, index) => {
+					card.classList.add('tech-card');
+					(card as HTMLElement).style.animationDelay = `${index * 0.15}s`;
+				});
+			});
+			
+			// Supaapps-style smooth scrolling
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', (e: Event) => {
+					e.preventDefault();
+					const anchorElement = e.currentTarget as HTMLAnchorElement;
+					const href = anchorElement.getAttribute('href') || '';
+					const target = document.querySelector(href);
+					if (target) {
+						const headerOffset = 80;
+						const elementPosition = target.getBoundingClientRect().top;
+						const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+						
+						// Smooth scroll with easing
+						const startTime = performance.now();
+						const startPosition = window.pageYOffset;
+						const distance = offsetPosition - startPosition;
+						const duration = 1200; // 1.2s like Supaapps
+						
+						function easeInOutCubic(t: number): number {
+							return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+						}
+						
+						function animation(currentTime: number): void {
+							const elapsed = currentTime - startTime;
+							const progress = Math.min(elapsed / duration, 1);
+							const easedProgress = easeInOutCubic(progress);
+							
+							window.scrollTo(0, startPosition + distance * easedProgress);
+							
+							if (progress < 1) {
+								requestAnimationFrame(animation);
+							}
+						}
+						
+						requestAnimationFrame(animation);
+					}
+				});
+			});
+			
+			// Subtle parallax for floating elements (Supaapps style)
+			let ticking = false;
+			function updateParallax() {
+				const scrolled = window.pageYOffset;
+				const parallaxElements = document.querySelectorAll('.animate-float');
+				
+				parallaxElements.forEach((element, index) => {
+					const speed = 0.3 + (index * 0.05); // Slower, more subtle
+					const yPos = -(scrolled * speed);
+					(element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+				});
+				
+				ticking = false;
+			}
+			
+			window.addEventListener('scroll', () => {
+				if (!ticking) {
+					requestAnimationFrame(updateParallax);
+					ticking = true;
+				}
+			});
+			
+			// Smooth card hover effects
+			document.addEventListener('DOMContentLoaded', () => {
+				const projectCards = document.querySelectorAll('.bg-slate-800\\/50');
+				projectCards.forEach(card => {
+					card.classList.add('card-smooth');
+				});
+			});
+			
+			// Add smooth button animations
+			document.addEventListener('DOMContentLoaded', () => {
+				const buttons = document.querySelectorAll('a[href="#contact"], a[href="#projects"]');
+				buttons.forEach(button => {
+					button.classList.add('btn-primary');
+				});
+			});
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

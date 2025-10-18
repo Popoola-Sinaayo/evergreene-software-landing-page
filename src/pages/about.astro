@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const seoData = {
+	title: "About Us - Evergreene Software Inc. | Nigerian Software Development Company",
+	description: "Learn about Evergreene Software Inc., a Nigerian software development company helping startups and businesses globally build high-quality software at affordable rates. Founded by Popoola Sinaayo.",
+	keywords: "about Evergreene Software, Nigerian software company, Popoola Sinaayo, software development team, Lagos Nigeria, startup development, affordable software",
+	canonical: "/about",
+	ogType: "website"
+};
+---
+
+<Layout {...seoData}>
+	<Navbar />
+	
+	<!-- Hero Section -->
+	<section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center" data-animate>
+				<h1 class="text-5xl sm:text-6xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					About <span class="text-emerald-600 dark:text-emerald-400">Evergreene</span>
+				</h1>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+					We're a Nigerian software development company with a global vision, helping startups and businesses worldwide build high-quality software at affordable rates.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Story Section -->
+	<section class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl mx-auto text-center" data-animate>
+				<h2 class="text-4xl font-bold text-slate-800 dark:text-white mb-6 font-heading">Our Story</h2>
+				<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+					Evergreene Software was founded with a simple mission: to make world-class software development accessible to businesses of all sizes, regardless of their location or budget.
+				</p>
+				<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+					Based in Nigeria, we've built a team of talented developers who combine local understanding with global expertise. We believe that great software shouldn't be limited by geography or budget constraints.
+				</p>
+				<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+					Our success is measured not just by the code we write, but by the impact we create for our clients and their users. We're proud to be the parent company of <strong class="text-emerald-600 dark:text-emerald-400">Phinmon</strong>, a fintech startup that's helping young people achieve financial wellness.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mission & Vision Section -->
+	<section class="py-20 bg-slate-50 dark:bg-slate-800/50 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid md:grid-cols-2 gap-12">
+				<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700" data-animate>
+					<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+						<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+					</div>
+					<h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 text-center">Our Mission</h3>
+					<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center">
+						To democratize access to world-class software development by providing affordable, high-quality solutions that help businesses grow and succeed in the digital age.
+					</p>
+				</div>
+				
+				<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700" data-animate>
+					<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+						<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+						</svg>
+					</div>
+					<h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 text-center">Our Vision</h3>
+					<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center">
+						To become the leading software development partner for businesses worldwide, known for our innovation, reliability, and commitment to client success.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Us Section -->
+	<section class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Why Choose <span class="text-emerald-600 dark:text-emerald-400">Evergreene?</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+					We combine the best of both worlds: global expertise with local understanding and competitive pricing.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="text-center" data-animate>
+					<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+						<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Affordable</h3>
+					<p class="text-slate-600 dark:text-slate-300">Global quality at local prices. We provide exceptional value without compromising on quality.</p>
+				</div>
+				
+				<div class="text-center" data-animate>
+					<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+						<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Fast</h3>
+					<p class="text-slate-600 dark:text-slate-300">Quick turnaround times without sacrificing quality. We understand that time is money.</p>
+				</div>
+				
+				<div class="text-center" data-animate>
+					<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+						<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Global Quality</h3>
+					<p class="text-slate-600 dark:text-slate-300">We follow international best practices and use cutting-edge technologies to deliver world-class solutions.</p>
+				</div>
+				
+				<div class="text-center" data-animate>
+					<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+						<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Great Communication</h3>
+					<p class="text-slate-600 dark:text-slate-300">Clear, regular updates and transparent communication throughout the development process.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Team Section -->
+	<section class="py-20 bg-slate-50 dark:bg-slate-800/50 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Our <span class="text-emerald-600 dark:text-emerald-400">Team</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+					Meet the talented individuals who make Evergreene Software a trusted partner for businesses worldwide.
+				</p>
+			</div>
+			
+			<div class="max-w-md mx-auto">
+				<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 text-center" data-animate>
+					<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl text-white font-bold">PS</span>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Popoola Sinaayo</h3>
+					<p class="text-emerald-600 dark:text-emerald-400 font-semibold mb-4">CEO & Founder</p>
+					<p class="text-slate-600 dark:text-slate-300 text-sm">
+						Visionary leader with extensive experience in software development and business strategy, leading Evergreene Software to deliver world-class solutions.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-br from-emerald-500 to-emerald-600 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="max-w-3xl mx-auto" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-white mb-6 font-heading">
+					Ready to work with us?
+				</h2>
+				<p class="text-xl text-emerald-100 mb-8 leading-relaxed">
+					Let's discuss your project and see how we can help bring your ideas to life.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+						Get Started Today
+					</a>
+					<a href="/portfolio" class="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300">
+						View Our Work
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>

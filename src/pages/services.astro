@@ -1,0 +1,510 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const seoData = {
+	title: "Software Development Services - Web, Mobile, API & SaaS | Evergreene Software",
+	description: "Professional software development services including web development, mobile apps, APIs, and SaaS solutions. Expert development at affordable rates from Nigeria.",
+	keywords: "software development services, web development, mobile app development, API development, SaaS solutions, React, Node.js, Python, Nigeria software company",
+	canonical: "/services",
+	ogType: "website"
+};
+---
+
+<Layout {...seoData}>
+	<Navbar />
+	
+	<!-- Hero Section -->
+	<section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center" data-animate>
+				<h1 class="text-5xl sm:text-6xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Our <span class="text-emerald-600 dark:text-emerald-400">Services</span>
+				</h1>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+					We offer comprehensive software development services to help your business grow and succeed in the digital world.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Overview -->
+	<section class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<ServiceCard
+					title="Web Development"
+					description="Modern, responsive web applications built with the latest technologies and best practices."
+					icon="🌐"
+					features={[
+						"Responsive design for all devices",
+						"Fast loading times and SEO optimization",
+						"Cross-browser compatibility",
+						"User-friendly interfaces",
+						"Scalable architecture"
+					]}
+					technologies={["React", "Next.js", "Django", "Node.js", "TypeScript"]}
+				/>
+				
+				<ServiceCard
+					title="Mobile Development"
+					description="Native and cross-platform mobile apps that deliver exceptional user experiences on iOS and Android."
+					icon="📱"
+					features={[
+						"iOS & Android native apps",
+						"Cross-platform solutions",
+						"App store optimization",
+						"Push notifications",
+						"Offline functionality"
+					]}
+					technologies={["React Native", "Expo", "Flutter", "Swift", "Kotlin"]}
+				/>
+				
+				<ServiceCard
+					title="API Development"
+					description="Robust APIs and backend services that power your applications with secure, scalable infrastructure."
+					icon="⚡"
+					features={[
+						"RESTful APIs and GraphQL",
+						"Database design and optimization",
+						"Cloud deployment and scaling",
+						"API documentation",
+						"Security and authentication"
+					]}
+					technologies={["Python", "Node.js", "PostgreSQL", "MongoDB", "AWS"]}
+				/>
+				
+				<ServiceCard
+					title="SaaS Solutions"
+					description="Complete software-as-a-service platforms from concept to deployment with ongoing support."
+					icon="🚀"
+					features={[
+						"Full-stack development",
+						"User management and authentication",
+						"Payment integration",
+						"Analytics and reporting",
+						"Multi-tenant architecture"
+					]}
+					technologies={["React", "Django", "PostgreSQL", "Docker", "AWS"]}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Detailed Services -->
+	<section class="py-20 bg-slate-50 dark:bg-slate-800/50 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Detailed <span class="text-emerald-600 dark:text-emerald-400">Service Breakdown</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+			</div>
+			
+			<div class="space-y-16">
+				<!-- Web Development -->
+				<div id="web-development" class="grid lg:grid-cols-2 gap-12 items-center" data-animate>
+					<div>
+						<h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-6">Web Development</h3>
+						<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+							We build modern, responsive web applications that work seamlessly across all devices and browsers. Our web development services include everything from simple landing pages to complex web applications.
+						</p>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Frontend Development</h4>
+									<p class="text-slate-600 dark:text-slate-300">React, Next.js, Vue.js, and modern CSS frameworks</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Backend Development</h4>
+									<p class="text-slate-600 dark:text-slate-300">Django, Node.js, Express, and database design</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">E-commerce Solutions</h4>
+									<p class="text-slate-600 dark:text-slate-300">Custom online stores with payment integration</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl p-8 border border-emerald-500/30">
+						<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Technologies We Use</h4>
+						<div class="grid grid-cols-2 gap-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">R</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">React</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">N</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Next.js</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">D</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Django</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">N</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Node.js</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Mobile Development -->
+				<div id="mobile-development" class="grid lg:grid-cols-2 gap-12 items-center" data-animate>
+					<div class="lg:order-2">
+						<h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-6">Mobile Development</h3>
+						<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+							We create mobile applications that provide exceptional user experiences on both iOS and Android platforms. Our solutions are optimized for performance and user engagement.
+						</p>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Cross-Platform Apps</h4>
+									<p class="text-slate-600 dark:text-slate-300">React Native and Flutter for efficient development</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Native Development</h4>
+									<p class="text-slate-600 dark:text-slate-300">Swift for iOS and Kotlin for Android</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">App Store Optimization</h4>
+									<p class="text-slate-600 dark:text-slate-300">ASO strategies for better visibility</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lg:order-1 bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl p-8 border border-emerald-500/30">
+						<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Mobile Technologies</h4>
+						<div class="grid grid-cols-2 gap-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">R</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">React Native</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">F</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Flutter</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">S</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Swift</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">K</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Kotlin</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- API Development -->
+				<div id="api-development" class="grid lg:grid-cols-2 gap-12 items-center" data-animate>
+					<div>
+						<h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-6">API & Backend Development</h3>
+						<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+							We build robust, scalable APIs and backend services that power your applications. Our solutions are designed for performance, security, and scalability.
+						</p>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">RESTful APIs</h4>
+									<p class="text-slate-600 dark:text-slate-300">Well-documented, secure API endpoints</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Database Design</h4>
+									<p class="text-slate-600 dark:text-slate-300">Optimized database schemas and queries</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Cloud Deployment</h4>
+									<p class="text-slate-600 dark:text-slate-300">AWS, Azure, and Google Cloud solutions</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl p-8 border border-emerald-500/30">
+						<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Backend Technologies</h4>
+						<div class="grid grid-cols-2 gap-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">P</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Python</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">N</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Node.js</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">P</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">PostgreSQL</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">A</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">AWS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- UI/UX Design -->
+				<div id="ui-ux-design" class="grid lg:grid-cols-2 gap-12 items-center" data-animate>
+					<div class="lg:order-2">
+						<h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-6">UI/UX Design</h3>
+						<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+							We create beautiful, intuitive user interfaces that provide exceptional user experiences. Our design process focuses on usability, accessibility, and visual appeal.
+						</p>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">User Research</h4>
+									<p class="text-slate-600 dark:text-slate-300">Understanding your users and their needs</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Wireframing & Prototyping</h4>
+									<p class="text-slate-600 dark:text-slate-300">Interactive prototypes for testing and validation</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<div>
+									<h4 class="font-semibold text-slate-800 dark:text-white mb-1">Visual Design</h4>
+									<p class="text-slate-600 dark:text-slate-300">Beautiful, modern interfaces that convert</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lg:order-1 bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl p-8 border border-emerald-500/30">
+						<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Design Tools</h4>
+						<div class="grid grid-cols-2 gap-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-pink-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">F</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Figma</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">A</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Adobe XD</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">S</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Sketch</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+									<span class="text-white font-bold text-sm">P</span>
+								</div>
+								<span class="text-slate-700 dark:text-slate-300">Principle</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Process Section -->
+	<section class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Our <span class="text-emerald-600 dark:text-emerald-400">Process</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+					We follow a proven development process to ensure your project is delivered on time and exceeds expectations.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-4 gap-8">
+				<div class="text-center" data-animate>
+					<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+						<span class="text-2xl text-white font-bold">1</span>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Discovery</h3>
+					<p class="text-slate-600 dark:text-slate-300">We understand your requirements, goals, and target audience to create the perfect solution.</p>
+				</div>
+				
+				<div class="text-center" data-animate>
+					<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+						<span class="text-2xl text-white font-bold">2</span>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Design</h3>
+					<p class="text-slate-600 dark:text-slate-300">We create wireframes, prototypes, and visual designs that align with your brand and goals.</p>
+				</div>
+				
+				<div class="text-center" data-animate>
+					<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+						<span class="text-2xl text-white font-bold">3</span>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Development</h3>
+					<p class="text-slate-600 dark:text-slate-300">We build your solution using the latest technologies and best practices with regular updates.</p>
+				</div>
+				
+				<div class="text-center" data-animate>
+					<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+						<span class="text-2xl text-white font-bold">4</span>
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Deployment</h3>
+					<p class="text-slate-600 dark:text-slate-300">We deploy your solution and provide ongoing support to ensure everything runs smoothly.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-br from-emerald-500 to-emerald-600 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="max-w-3xl mx-auto" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-white mb-6 font-heading">
+					Ready to get started?
+				</h2>
+				<p class="text-xl text-emerald-100 mb-8 leading-relaxed">
+					Let's discuss your project and see how we can help bring your ideas to life with our comprehensive software development services.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+						Start Your Project
+					</a>
+					<a href="/portfolio" class="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300">
+						View Our Work
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"name": "Software Development Services",
+	"description": "Professional software development services including web development, mobile apps, APIs, and SaaS solutions.",
+	"provider": {
+		"@type": "Organization",
+		"name": "Evergreene Software Inc.",
+		"url": "https://evergreenesoftware.com"
+	},
+	"areaServed": {
+		"@type": "Country",
+		"name": "Global"
+	},
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Software Development Services",
+		"itemListElement": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Web Development",
+					"description": "Modern, responsive web applications built with React, Next.js, Django, and Node.js"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Mobile Development",
+					"description": "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "API Development",
+					"description": "Robust APIs and backend services with secure, scalable infrastructure"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "SaaS Solutions",
+					"description": "Complete software-as-a-service platforms from concept to deployment"
+				}
+			}
+		]
+	}
+}
+</script>

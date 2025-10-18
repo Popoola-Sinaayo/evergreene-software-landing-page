@@ -1,11 +1,244 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const seoData = {
+	title: "Evergreene Software Inc. - World-Class Software for Less | Nigeria",
+	description: "We build world-class software for less. Helping startups and businesses bring their ideas to life with affordable, global-standard development. Based in Nigeria, trusted globally.",
+	keywords: "software development Nigeria, web development Lagos, mobile apps, fintech, SaaS, affordable software, React, Node.js, Python, Evergreene Software, Phinmon, startup development",
+	canonical: "/",
+	ogType: "website"
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout {...seoData}>
+	<Navbar />
+	<Hero />
+	
+	<!-- About Preview Section -->
+	<section id="about" class="py-20 bg-slate-50 dark:bg-slate-800/50 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Based in Nigeria. <span class="text-emerald-600 dark:text-emerald-400">Trusted globally.</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full"></div>
+			</div>
+			
+			<div class="grid lg:grid-cols-2 gap-12 items-center">
+				<div data-animate>
+					<h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-6 font-heading">Why Choose Evergreene?</h3>
+					<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6 font-light">
+						At Evergreene Software, we don't just build apps — we bring your ideas to life with precision, speed, and heart. 
+						Our team combines global expertise with local understanding to deliver software that works.
+					</p>
+					<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 font-light">
+						We're the parent company of <strong class="text-emerald-600 dark:text-emerald-400">Phinmon</strong>, a fintech startup 
+						focused on young people and financial wellness, proving our ability to build and scale successful products.
+					</p>
+					
+					<div class="flex flex-col sm:flex-row gap-4">
+						<a href="/about" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 text-center">
+							Learn More About Us
+						</a>
+						<a href="/portfolio" class="border border-emerald-500 text-emerald-600 dark:text-emerald-400 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-center">
+							See Our Work
+						</a>
+					</div>
+				</div>
+				
+				<div class="relative" data-animate>
+					<div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl p-8 backdrop-blur-sm border border-emerald-500/30">
+						<div class="grid grid-cols-2 gap-6">
+							<div class="text-center">
+								<div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+									</svg>
+								</div>
+								<h4 class="text-slate-800 dark:text-white font-semibold mb-2">Fast Delivery</h4>
+								<p class="text-slate-600 dark:text-slate-300 text-sm">Quick turnaround times</p>
+							</div>
+							<div class="text-center">
+								<div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+									</svg>
+								</div>
+								<h4 class="text-slate-800 dark:text-white font-semibold mb-2">Affordable Rates</h4>
+								<p class="text-slate-600 dark:text-slate-300 text-sm">Global quality, local prices</p>
+							</div>
+							<div class="text-center">
+								<div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+									</svg>
+								</div>
+								<h4 class="text-slate-800 dark:text-white font-semibold mb-2">Global Reach</h4>
+								<p class="text-slate-600 dark:text-slate-300 text-sm">Serving clients worldwide</p>
+							</div>
+							<div class="text-center">
+								<div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+									</svg>
+								</div>
+								<h4 class="text-slate-800 dark:text-white font-semibold mb-2">Great Communication</h4>
+								<p class="text-slate-600 dark:text-slate-300 text-sm">Clear, regular updates</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Overview Section -->
+	<section id="services" class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Our <span class="text-emerald-600 dark:text-emerald-400">Services</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+					We offer comprehensive software development services to help your business grow and succeed.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<ServiceCard
+					title="Web Development"
+					description="Modern, responsive web applications built with the latest technologies."
+					icon="🌐"
+					features={[
+						"Responsive design",
+						"Fast loading times",
+						"SEO optimized",
+						"Cross-browser compatibility"
+					]}
+					technologies={["React", "Next.js", "Django", "Node.js"]}
+				/>
+				
+				<ServiceCard
+					title="Mobile Development"
+					description="Native and cross-platform mobile apps that deliver exceptional user experiences."
+					icon="📱"
+					features={[
+						"iOS & Android apps",
+						"Cross-platform solutions",
+						"App store optimization",
+						"Push notifications"
+					]}
+					technologies={["React Native", "Expo", "Flutter", "Swift"]}
+				/>
+				
+				<ServiceCard
+					title="API Development"
+					description="Robust APIs and backend services that power your applications."
+					icon="⚡"
+					features={[
+						"RESTful APIs",
+						"GraphQL endpoints",
+						"Database design",
+						"Cloud deployment"
+					]}
+					technologies={["Python", "Node.js", "PostgreSQL", "AWS"]}
+				/>
+				
+				<ServiceCard
+					title="SaaS Solutions"
+					description="Complete software-as-a-service platforms from concept to deployment."
+					icon="🚀"
+					features={[
+						"Full-stack development",
+						"User management",
+						"Payment integration",
+						"Analytics dashboard"
+					]}
+					technologies={["React", "Django", "PostgreSQL", "Docker"]}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Portfolio Highlights Section -->
+	<section id="portfolio" class="py-20 bg-slate-50 dark:bg-slate-800/50 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Our <span class="text-emerald-600 dark:text-emerald-400">Product</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+					See how we've built Phinmon, our fintech startup focused on young people and financial wellness.
+				</p>
+			</div>
+			
+			<div class="max-w-4xl mx-auto">
+				<PortfolioCard
+					title="Phinmon"
+					description="A fintech startup focused on young people and financial wellness. Features AI-powered financial insights, expense tracking, and personalized financial advice."
+					category="Fintech"
+					image="/images/phinmon.jpg"
+					technologies={["React Native", "Python", "OpenAI", "PostgreSQL", "AWS"]}
+					results={[
+						"40% increase in user engagement",
+						"90% reduction in manual financial tracking",
+						"Real-time financial insights"
+					]}
+					featured={true}
+				/>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Final CTA Section -->
+	<section id="contact" class="py-20 bg-gradient-to-br from-emerald-500 to-emerald-600 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="max-w-3xl mx-auto" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-white mb-6 font-heading">
+					Need a reliable dev partner?
+				</h2>
+				<p class="text-xl text-emerald-100 mb-8 leading-relaxed">
+					Let's talk about your project and how we can help bring your ideas to life with world-class software development.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+						Let's Build Together
+					</a>
+					<a href="mailto:hello@evergreenesoftware.com" class="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300">
+						hello@evergreenesoftware.com
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
 </Layout>
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Evergreene Software Inc.",
+	"url": "https://evergreenesoftware.com",
+	"description": "We build world-class software for less. Helping startups and businesses bring their ideas to life with affordable, global-standard development.",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Evergreene Software Inc.",
+		"url": "https://evergreenesoftware.com"
+	},
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://evergreenesoftware.com/search?q={search_term_string}",
+		"query-input": "required name=search_term_string"
+	}
+}
+</script>

@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+
+const seoData = {
+	title: "Portfolio - Phinmon Fintech App & Software Projects | Evergreene Software",
+	description: "Explore our portfolio featuring Phinmon fintech app and other successful software projects. See how Evergreene Software helps businesses build world-class applications.",
+	keywords: "portfolio, Phinmon, fintech app, software projects, React Native, Python, OpenAI, Evergreene Software, Nigeria software development",
+	canonical: "/portfolio",
+	ogType: "website"
+};
+---
+
+<Layout {...seoData}>
+	<Navbar />
+	
+	<!-- Hero Section -->
+	<section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center" data-animate>
+				<h1 class="text-5xl sm:text-6xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Our <span class="text-emerald-600 dark:text-emerald-400">Product</span>
+				</h1>
+				<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+					See how we've built Phinmon, our fintech startup focused on young people and financial wellness.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Project - Phinmon -->
+	<section class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					<span class="text-emerald-600 dark:text-emerald-400">Phinmon</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+			</div>
+			
+			<div class="max-w-5xl mx-auto">
+				<div class="bg-white dark:bg-slate-800 rounded-2xl p-12 border border-slate-200 dark:border-slate-700 hover:border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-[1.02]" data-animate>
+					<div class="text-center mb-8">
+						<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-4xl font-bold text-slate-800 dark:text-white mb-4 font-heading">Phinmon</h3>
+						<p class="text-xl text-emerald-600 dark:text-emerald-400 font-semibold mb-6">AI-Powered Financial Wellness Platform</p>
+						<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">
+							Featured Project
+						</span>
+					</div>
+					
+					<div class="grid md:grid-cols-2 gap-8 mb-8">
+						<div>
+							<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4 font-heading">Project Overview</h4>
+							<p class="text-slate-600 dark:text-slate-300 mb-6 font-light leading-relaxed">
+								Phinmon is a fintech startup focused on young people and financial wellness. We built a comprehensive platform that helps users manage their finances, track expenses, and receive AI-powered financial advice.
+							</p>
+							<p class="text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+								The platform features real-time expense tracking, personalized financial insights, and educational content to help users build better financial habits.
+							</p>
+						</div>
+						
+						<div>
+							<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4 font-heading">Key Features</h4>
+							<ul class="space-y-3 text-slate-600 dark:text-slate-300">
+								<li class="flex items-center">
+									<svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									AI-powered financial insights and recommendations
+								</li>
+								<li class="flex items-center">
+									<svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Real-time expense tracking and categorization
+								</li>
+								<li class="flex items-center">
+									<svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Personalized financial education content
+								</li>
+								<li class="flex items-center">
+									<svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Goal setting and progress tracking
+								</li>
+								<li class="flex items-center">
+									<svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Secure bank account integration
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="mb-8">
+						<h4 class="text-xl font-bold text-slate-800 dark:text-white mb-4 font-heading">Technology Stack</h4>
+						<div class="flex flex-wrap gap-3">
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">React Native</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">Python</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">OpenAI</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">Node.js</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">Plaid API</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">PostgreSQL</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">AWS</span>
+							<span class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">Docker</span>
+						</div>
+					</div>
+					
+					<div class="text-center">
+						<a href="/contact" class="inline-flex items-center bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25">
+							Build Something Similar
+							<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Project Stats -->
+	<section class="py-20 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 font-heading">
+					Project <span class="text-emerald-600 dark:text-emerald-400">Statistics</span>
+				</h2>
+				<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto rounded-full mb-8"></div>
+			</div>
+			
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+				<div class="text-center" data-animate>
+					<div class="text-4xl md:text-5xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">1</div>
+					<div class="text-slate-600 dark:text-slate-300">Product Built</div>
+				</div>
+				<div class="text-center" data-animate>
+					<div class="text-4xl md:text-5xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">40%</div>
+					<div class="text-slate-600 dark:text-slate-300">User Engagement Increase</div>
+				</div>
+				<div class="text-center" data-animate>
+					<div class="text-4xl md:text-5xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">90%</div>
+					<div class="text-slate-600 dark:text-slate-300">Reduction in Manual Tracking</div>
+				</div>
+				<div class="text-center" data-animate>
+					<div class="text-4xl md:text-5xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">24/7</div>
+					<div class="text-slate-600 dark:text-slate-300">Real-time Insights</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-br from-emerald-500 to-emerald-600 section-reveal">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="max-w-3xl mx-auto" data-animate>
+				<h2 class="text-4xl sm:text-5xl font-bold text-white mb-6 font-heading">
+					Ready to start your project?
+				</h2>
+				<p class="text-xl text-emerald-100 mb-8 leading-relaxed">
+					Let's discuss your ideas and see how we can help bring them to life with our proven track record of successful projects.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+						Start Your Project
+					</a>
+					<a href="/services" class="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300">
+						View Our Services
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "CreativeWork",
+	"name": "Phinmon - Fintech App",
+	"description": "A fintech startup focused on young people and financial wellness. Features AI-powered financial insights, expense tracking, and personalized financial advice.",
+	"creator": {
+		"@type": "Organization",
+		"name": "Evergreene Software Inc.",
+		"url": "https://evergreenesoftware.com"
+	},
+	"dateCreated": "2023",
+	"genre": "Fintech Application",
+	"keywords": "fintech, financial wellness, AI-powered insights, expense tracking, React Native, Python, OpenAI",
+	"about": {
+		"@type": "Thing",
+		"name": "Financial Technology",
+		"description": "Technology solutions for financial services and personal finance management"
+	},
+	"offers": {
+		"@type": "Offer",
+		"description": "40% increase in user engagement, 90% reduction in manual financial tracking, Real-time financial insights"
+	}
+}
+</script>
