@@ -11,8 +11,8 @@ export interface Props {
 
 const { 
 	title = "Evergreene Software Inc. - World-Class Software for Less", 
-	description = "We build world-class software for less. Helping startups and businesses bring their ideas to life with affordable, global-standard development. Based in Nigeria, trusted globally.",
-	keywords = "software development, web development, mobile apps, fintech, SaaS, Nigeria, affordable software, React, Node.js, Python, Evergreene Software, Phinmon",
+	description = "We build world-class software for less. Helping startups and businesses bring their ideas to life with affordable, global-standard development.",
+	keywords = "software development, web development, mobile apps, fintech, SaaS, affordable software, React, Node.js, Python, Evergreene Software, Phinmon",
 	canonical = Astro.url.href,
 	ogImage = "/og-image.svg",
 	ogType = "website",
@@ -70,11 +70,6 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		
-		<!-- Geo Tags -->
-		<meta name="geo.region" content="NG-LA" />
-		<meta name="geo.placename" content="Lagos, Nigeria" />
-		<meta name="geo.position" content="6.5244;3.3792" />
-		<meta name="ICBM" content="6.5244, 3.3792" />
 		
 		<!-- Business/Organization Schema -->
 		<script type="application/ld+json">
@@ -90,14 +85,9 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}
 				"@type": "Person",
 				"name": "Popoola Sinaayo"
 			},
-			"address": {
-				"@type": "PostalAddress",
-				"addressLocality": "Lagos",
-				"addressCountry": "Nigeria"
-			},
 			"contactPoint": {
 				"@type": "ContactPoint",
-				"telephone": "+234-XXX-XXX-XXXX",
+				"telephone": "+1-XXX-XXX-XXXX",
 				"contactType": "customer service",
 				"email": "hello@evergreenesoftware.com"
 			},
