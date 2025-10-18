@@ -149,8 +149,32 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}
 		<!-- Preload critical resources -->
 		<link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
 		
+		<!-- Theme initialization script to prevent FOUC -->
+		<script>
+			// Apply theme immediately to prevent flash of unstyled content
+			(function() {
+				const getInitialTheme = () => {
+					const savedTheme = localStorage.getItem('theme');
+					if (savedTheme) {
+						return savedTheme;
+					}
+					return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				};
+				
+				const theme = getInitialTheme();
+				if (theme === 'dark') {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
+		
 		<!-- Custom CSS for animations and scrollbar -->
 		<style>
+			/* Prevent flash of unstyled content */
+			:root {
+				color-scheme: light dark;
+			}
+			
 			/* Supaapps-style smooth animations */
 			[data-animate] {
 				opacity: 0;
